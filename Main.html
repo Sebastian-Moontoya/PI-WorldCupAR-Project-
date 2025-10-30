@@ -4,23 +4,287 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MundialAR</title>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.5/dist/mindar-image.prod.js"></script>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <link rel = "stylesheet" href = "/css/Main.css">
 </head>
 <body>
-    <a-scene  mindar-image = "imageTargetSrc:../targets/targets.mind;"
+    <div class = "main">
+        <div class = "main-header">
+        <select name = "countries" id = "s-countries">
+            <option value = "0"> Seleccione un país</option>
+            <option value="Mexico">México </option>
+            <option value="EstadosUnidos">Estados Unidos</option>
+            <option value="Canada">Canadá</option>
+            <option value="Japon">Japón</option>
+            <option value="NuevaZelanda">Nueva Zelanda</option>
+            <option value="Iran">República Islámica de Irán</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Uzbekistan">Uzbekistán</option>
+            <option value="SouthKorea">República de Corea</option>
+            <option value="Jordania">Jordania</option>
+            <option value="Australia">Australia</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Marruecos">Marruecos</option>
+            <option value="Tunez">Túnez</option>
+        </select>
+            <button id = "btn-help">
+            </button>
+        </div>
+        <a-scene  mindar-image = "imageTargetSrc:../targets/logos.mind;"
         vr-mode-ui = "enabled:false"
         devide-orientation-permission-ui = "enabled: false">
-        
         <a-camera position = "0 0 0" look-controls = "enabled: false">
             <a-entity mindar-image-target = "targetIndex: 0">
-                <a-sphere position = "0 0 0" radius = "0.25" color = "white"></a-sphere>
-
-
-            </a-entity>
+                <!-- <a-entity
+                    gltf-model="modelos/tunez.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity> 
+            <a-entity mindar-image-target = "targetIndex: 1">
+                <!-- <a-entity
+                    gltf-model="modelos/marruecos.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity> 
+            <a-entity mindar-image-target = "targetIndex: 2">
+                <!-- <a-entity
+                    gltf-model="modelos/paraguay.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity> 
+            <a-entity mindar-image-target = "targetIndex: 3">
+                <!-- <a-entity
+                    gltf-model="modelos/colombia.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity> 
+            <a-entity mindar-image-target = "targetIndex: 4">
+                <!-- <a-entity
+                    gltf-model="modelos/uruguay.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity> 
+            <a-entity mindar-image-target = "targetIndex: 5">
+                <!-- <a-entity
+                    gltf-model="modelos/ecuador.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity> 
+            <a-entity mindar-image-target = "targetIndex: 6">
+                <!-- <a-entity
+                    gltf-model="modelos/australia.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity> 
+            <a-entity mindar-image-target = "targetIndex: 7">
+                <!-- <a-entity
+                    gltf-model="modelos/jordania.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity> 
+            <a-entity mindar-image-target = "targetIndex: 8">
+                <!-- <a-entity
+                    gltf-model="modelos/southkorea.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity> 
+            <a-entity mindar-image-target = "targetIndex: 9">
+                <!-- <a-entity
+                    gltf-model="modelos/uzbekistan.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity> 
+            <a-entity mindar-image-target = "targetIndex: 10">
+                <!-- <a-entity
+                    gltf-model="modelos/argentina.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity>  
+            <a-entity mindar-image-target = "targetIndex: 11">
+                <!-- <a-entity
+                    gltf-model="modelos/iran.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity>  
+            <a-entity mindar-image-target = "targetIndex: 12">
+                <!-- <a-entity
+                    gltf-model="modelos/japon.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity>  
+            <a-entity mindar-image-target = "targetIndex: 13">
+                <!-- <a-entity
+                    gltf-model="modelos/nuevazelanda.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity>      
+            <a-entity mindar-image-target = "targetIndex: 14">
+                <!-- <a-entity
+                    gltf-model="modelos/estadosunidos.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity>  
+            <a-entity mindar-image-target = "targetIndex: 15">
+                <!-- <a-entity
+                    gltf-model="modelos/canada.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity>  
+            <a-entity mindar-image-target = "targetIndex: 16">
+                <!-- <a-entity
+                    gltf-model="modelos/brasil.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity>         
+            <a-entity mindar-image-target = "targetIndex: 17">
+                <!-- <a-entity
+                    gltf-model="modelos/mexico.glb" 
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0">
+                </a-entity> -->
+            </a-entity>   
         </a-camera>
-    </a-scene>
-    
+        </a-scene>
+        <div class = "main-footer">
+            <!-- <div class = "mf-histogram">    
+                <img src = "assets/img/color_histogram.png">
+            </div> -->
+            <div class = "mf-buttons">
+                <button id = "btn-video"> </button>
+                <button id = "btn-trivia"> </button>
+                <button id = "btn-statistics"> </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de ayuda -->
+    <div id="main-modal" class="modal">
+        <div class="modal-content">
+            <div class = "modal-header">
+                <label>¿Cómo funciona?</label>
+                <button id = "btn-close"></button>
+            </div>
+            <div class = "modal-body">  
+                <img src = "/assets/img/instruction1.png">
+                <p>Primeramente, debemos seleccionar uno de los países que deseemos visualizar por medio del combobox. 
+                </p>
+            </div>
+
+            <div class = "modal-footer">
+                <button id = "btn-return">
+                    Volver
+                </button>
+                <button id = "btn-next">
+                    Siguiente
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de video -->
+    <div id="modal-video" class="modal-secondary">
+        <div class="modal-content-secondary">
+            <div class = "modal-header-secondary">
+                <label> Video </label>
+                <button id = "btn-close-video"></button>
+            </div>
+            <div class = "modal-body-secondary">
+                <video id="video-player" controls>
+                    <source src = "/assets/videos/Mexico_Brasil.MP4" type = "video/mp4">
+                </video>
+            </div>
+
+            <div class = "modal-footer-secondary">
+                <button id = "btn-filter1"> 1 </button>
+                <button id = "btn-filter2"> 2 </button>
+                <button id = "btn-filter3"> 3 </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de trivia -->
+    <div id="modal-trivia" class="modal-secondary">
+        <div class="modal-content-secondary">
+            <div class = "modal-header-secondary">
+                <label> Trivia </label>
+                <button id = "btn-close-trivia"></button>
+            </div>
+            <div class = "modal-body-secondary">
+                <p id="trivia-question">¿Qué país ha ganado más Copas Mundiales de la FIFA?</p>
+                <div class="trivia-options" id = "trivia-options-container">
+                    <!-- <button class="trivia-option-btn">Brasil</button>
+                    <button class="trivia-option-btn">Alemania</button>
+                    <button class="trivia-option-btn">Argentina</button> -->
+                </div>
+            </div>
+
+            <div class = "modal-footer-secondary">
+                <button id = "btn-trivia-next"> Siguiente </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de estadísticas -->
+    <div id="modal-statistics" class="modal-secondary">
+        <div class="modal-content-secondary">
+            <div class = "modal-header-secondary">
+                <label>Estadísticas</label>
+                <button id = "btn-close-statistics"></button>
+            </div>
+            <div class = "modal-body-secondary">
+                <p id="stats-country-title">Estadísticas de México</p>
+                <ul id="stats-list">
+                    <li>Copas: 0</li>
+                    <li>Participaciones: 18</li>
+                    <li>Mejor Posición: Cuartos de final</li>
+                </ul>
+            </div>
+
+            <div class = "modal-footer-secondary">
+                </div>
+        </div>
+    </div>
+
+    <!-- Modal de advertencia -->
+    <div id="modal-warning" class="modal-secondary">
+        <div class="modal-content-secondary">
+            <div class = "modal-header-secondary">
+                <label>Advertencia</label>
+                <button id = "btn-close-warning"></button>
+            </div>
+            <div class = "modal-body-secondary">
+                <img src = "assets/img/warning-icon.png">
+                <p id="p-warning-text"> Debe seleccionar un país para poder visualizar su contenido. </p>
+            </div>
+        </div>
+    </div> 
+
+    <script src = "js/CountryData.js"></script>
+
+    <script src = "js/Scanner.js"></script>
+    <script src = "js/Modals.js"></script>
+    <script src = "js/HelpGuide.js"></script>
 </body>
 </html>

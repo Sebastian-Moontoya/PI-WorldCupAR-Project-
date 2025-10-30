@@ -1,0 +1,486 @@
+@font-face {
+  font-family: 'Pixellari';
+  src: url("/assets/fonts/Pixellari.ttf");
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    gap: 20px; 
+    height: 5%;
+}
+
+.main-header #s-countries{
+    padding: 5px;
+    z-index: 10;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.664);
+    color: white;
+    font-family: 'Pixellari', Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 20%;
+    text-align: center;
+    font-size: large;
+    border: 4px solid #4a4a4a; 
+}
+
+#s-countries:focus {
+    border: 1px thin;
+}
+
+.main-header #btn-help{
+    padding: 20px;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Pixellari', Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0.621);
+    background-image: url("/assets/img/QuestionMark.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    border: none;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: 4px solid #4a4a4a; 
+}
+
+.main-header #btn-help:hover{
+    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.463);
+}
+
+.a-scene{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-footer{
+    display: flex;
+    flex-direction: row;    
+    width: 20%;
+    height: 100px;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    bottom: 30px;
+    z-index: 10;
+}
+
+.main-footer .mf-histogram{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0px;
+}
+
+.main-footer .mf-buttons{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+    flex-grow: 2;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.664);
+    border-radius: 20px;
+    height: 40%;
+    border: 4px solid #4a4a4a; 
+}
+
+.mf-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.mf-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.407);
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+
+#btn-video{
+    background-image: url("/assets/img/video-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+#btn-trivia{
+    background-image: url("/assets/img/trivia-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+#btn-statistics{
+    background-image: url("/assets/img/statistics-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.main-footer .mf-histogram img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Modal del manual de usuario */
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 10; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8); 
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Pixellari', Arial, Helvetica, sans-serif;
+    background-color: #1b1b1b;
+    border: 4px solid #4a4a4a; 
+    margin: 5% auto; 
+    padding: 20px 20px 20px 20px;
+    width: 20%; 
+    color: white;
+    border-radius: 4px;
+    height: 100%;
+    max-height: 500px;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease; 
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.modal-header label{
+    font-size: larger;
+    flex-grow: 2;
+}
+
+#btn-close {
+    background-image: url("/assets/img/close-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.modal-body{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 10px;
+}
+
+.modal-body img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.modal-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    gap:10px; 
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-footer button{
+    font-family: 'Pixellari', Arial, Helvetica, sans-serif;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: large;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.modal-footer button:hover{
+    background-color:rgba(68, 68, 68, 0.76);
+}
+
+/* Modales para las funcionalidades (Video, trivia, estadísticas)*/
+.modal-secondary {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); 
+}
+
+.modal-content-secondary {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Pixellari', Arial, Helvetica, sans-serif;
+    background-color: #1b1b1b;
+    border: 4px solid #4a4a4a; 
+    margin: 30% auto;
+    padding: 10px;
+    width: 80%; 
+    max-width: 600px;
+    color: white;
+    border-radius: 4px; 
+    box-shadow: 8px 8px 0px 0px #0e0e0e; 
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-header-secondary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #4a4a4a; 
+}
+
+.modal-header-secondary label {
+    font-size: x-large;
+    flex-grow: 2;
+    padding-left: 10px;
+}
+
+#btn-close-video,
+#btn-close-trivia,
+#btn-close-statistics, #btn-close-warning {
+    background-image: url("/assets/img/close-icon.png"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#btn-close-video:hover,
+#btn-close-trivia:hover,
+#btn-close-statistics:hover, 
+#btn-close-warning:hover {
+    transform: scale(1.1);
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.modal-body-secondary {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #cecece; 
+}
+
+.modal-footer-secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-top: 2px solid #4a4a4a; 
+}
+
+.modal-footer-secondary button {
+    font-family: 'Pixellari', Arial, Helvetica, sans-serif;
+    border: 2px solid #ff7f00;
+    background-color: #1d1d1d; 
+    color: white;
+    font-size: large;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.3s;
+}
+
+.modal-footer-secondary button:hover {
+    background-color: #343434;
+    transform: scale(1.05);
+}
+
+.trivia-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 80%;
+}
+
+.trivia-option-btn {
+    font-family: 'Pixellari', Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border: 2px solid #2a2a2a;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+    text-align: left;
+}
+
+.trivia-option-btn:hover {
+    background-color: #4a4a4a;
+}
+
+.trivia-option-btn.correct {
+    background-color: #28a745; 
+    color: white;
+    border-color: #28a745;
+}
+
+.trivia-option-btn.incorrect {
+    background-color: #dc3545; 
+    color: white;
+    border-color: #dc3545;
+}
+
+.trivia-option-btn:disabled {
+    opacity: 0.7;
+}
+
+.trivia-option-btn.correct:disabled {
+    background-color: #28a745;
+    color: white;
+    opacity: 1; 
+}
+
+/* Animaciones */
+@keyframes fadeIn{
+    from {
+        opacity: 0; 
+    } to {
+        opacity: 1; 
+    }
+}
+
+/* Responsividad */
+@media (min-width: 320px) and (max-width: 600px){
+    .main-header #s-countries{
+        padding: 5px;
+        z-index: 10;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.664);
+        color: white;
+        font-family: 'Pixellari', Arial, Helvetica, sans-serif;
+        height: 100%;
+        width: 70%;
+        text-align: center;
+        font-size: large;
+    }
+    .main-footer{
+        display: flex;
+        flex-direction: row;    
+        width: 90%;
+        height: 100px;
+        padding: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        bottom: 30px;
+    }
+
+    .main-footer .mf-histogram{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 50%;
+        height: 100%;
+        padding: 10px 0px;
+    }
+
+    .main-footer .mf-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        padding: 10px 0px;
+        z-index: 2000;
+    }
+
+
+    .mf-histogram img{
+        object-fit: contain;
+    }
+
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Pixellari', Arial, Helvetica, sans-serif;
+        background-color: #1b1b1b;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        width: 70%; /* Could be more or less, depending on screen size */
+        color: white;
+        border-radius: 10px;
+    }
+
+    .modal-body img{
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+    }
+}
